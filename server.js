@@ -25,12 +25,10 @@ const getFullName = (req,res,next)=>{
 
   } else if(!firstName){
     // case firstname is missing
-
     res.json({error: "First Name is required!"});
     return;
   } else if(!lastName){
     //case lastname is missing
-
     res.json({error: "Last Name is required!"});
     return;
   }
