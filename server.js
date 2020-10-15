@@ -1,11 +1,20 @@
 const express = require('express');
 const app = express();
+const morgan = require('morgan')
+
+app.use(morgan('dev'))
+app.use(express.json())
+
+const logBody = (req, res, next) => {
+  console.log(req.body)
+  next()
+}
 
 app.get('/getme', (req, res) => {
   res.json({})
 });
 
-app.post('/postme', (req, res) => {
+app.post('/postme', logBody, (req, res) => {
   res.json({})
 })
 
