@@ -14,7 +14,7 @@ const bodyLogger = (req, res, next) => {
 const fullName = (req, res, next) => {
   const { firstname, lastname } = req.body;
   if (firstname && lastname) {
-    res.locals.fullname = firstname + lastname;
+    res.locals.fullname = firstname + " " + lastname;
   }
   next();
 };
