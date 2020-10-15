@@ -14,6 +14,8 @@ const setPostMiddleware = (req,res,next)=>{
 
 const getFullName = (req,res,next)=>{
 
+  /* let isBodyEmpty = Object.keys(req.body).lenght > 0; */
+
   // Destructuring body fields
   const {firstName, lastName} = req.body;
 
