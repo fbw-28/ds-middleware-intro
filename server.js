@@ -14,9 +14,7 @@ app.use((req, res, next) => {
 
 //middleware for fullName
 const fullNameMiddleware = (req, res, next) => {
-  let fullName;
   const { firstName, lastName } = req.body;
-  console.log(firstName);
   if (firstName && lastName) {
     res.locals.fullName = firstName + " " + lastName;
     next();
